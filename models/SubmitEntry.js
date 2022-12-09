@@ -3,7 +3,19 @@ const mongoose = require('mongoose');
 //ceating the schema
 //const submitEntrySchema = new mongoose.Schema({
 const submitEntrySchema = mongoose.Schema({
-    fullname: {
+    raffleNo: {
+        type: Number,
+        required: true
+    },
+    lastName: {
+        type: String,
+        required: true
+    },
+    middleName: {
+        type: String,
+        required: true
+    },
+    firstName: {
         type: String,
         required: true
     },
@@ -22,9 +34,17 @@ const submitEntrySchema = mongoose.Schema({
         type: String,
         required: true
     },
-    recipientEmail: {
+    // recipientEmail: {
+    //     type: String,
+    //     required: true
+    // },
+    myRefCode: {
         type: String,
         required: true
+    },
+    refferedBy: {
+        type: String,
+        //required: true
     },
     pvcImage: {
         //data: Buffer,
