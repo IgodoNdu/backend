@@ -58,4 +58,4 @@ const submitEntrySchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model("myPVCtableCollection", submitEntrySchema);
+module.exports = mongoose.model("myPVCtableCollectionUpdate", submitEntrySchema);
