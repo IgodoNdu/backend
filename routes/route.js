@@ -121,5 +121,21 @@ router.get('/entry/get', (req, res) => {
     })
 })
 
+router.get('/entry/get/:phoneNumber', (req, res) => {
+    const numberFetch = req.params.phoneNumber
+    makeEntry.find({ phone: numberFetch }, function(err, data){
+        if(err) {
+            res.status(500).send(err);
+        } else{
+            if(data.length == 0){
+                res.send("Data not found");
+            }else{
+                res.status(200).send(data);
+                console.log(data);
+            }
+        }
+    })
+})
+
 //export the router use
 module.exports = router;
